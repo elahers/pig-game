@@ -1,0 +1,47 @@
+body{
+    font-family:cursive ;
+    background: linear-gradient(to right, rgb(206, 76, 98),rgb(121, 19, 58) 80%);
+}
+.box{
+    background-color: aliceblue;
+    height: 75%;
+}
+.right-section{
+    width: 100%;
+background:  linear-gradient(to bottom left, rgb(241, 156, 184), white 80%);
+}
+.left-section{
+    background:  linear-gradient(to bottom right, rgb(241, 156, 184), white 80%);
+    /* background:  linear-gradient(to bottom right,  rgb(224, 114, 133) , white 70%);
+     */
+}
+
+.pannel{
+    background-image: linear-gradient(180deg,  rgb(224, 114, 133) , rgb(54, 53, 53));
+}
+.x{
+    display: inline-block;
+}
+.img,.img1, .img2, .img3, .img4, .img5, .img6{
+    display:block;
+    width: 100px;
+    height: 100px;
+}
+.hidden1{
+    display: none;
+}
+.hidden2{
+    display: none;
+}
+.hidden3{
+    display: none;
+}
+.hidden4{
+    display: none;
+}
+.hidden5{
+    display: none;
+}
+.hidden6{
+    display: none;
+}
