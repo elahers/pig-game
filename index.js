@@ -16,6 +16,11 @@ let currentScore2=document.querySelector('.current-score-2')
 let totalScore1=document.querySelector('.total-score-1')
 let totalScore2=document.querySelector('.total-score-2')
 
+let right=document.querySelector('.right-section')
+let left=document.querySelector('.left-section')
+
+
+
 currentScore1.textContent=0
 currentScore2.textContent=0
 
@@ -41,12 +46,16 @@ function rollDice() {
 
         if(isFirstActive){
             isFirstActive=false;
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             // totalScore1.textContent=totalScore_1
             currScore_1 = 0;
             currentScore1.textContent=currScore_1
         }
         else{
             isFirstActive=true;
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             // totalScore_2+=totalScore_2;
             // totalScore_2=currScore_2;
             // totalScore2.textContent=totalScore_2
@@ -57,19 +66,24 @@ function rollDice() {
        
     }
     else if(number== 2){
+        
         image1.classList.add('hidden1');
         image2.classList.remove('hidden2');
         image3.classList.add('hidden3');
         image4.classList.add('hidden4');
         image5.classList.add('hidden5');
         image6.classList.add('hidden6');
-        currentScore1.style.backgroundColor='grey'
+        
 
         if(isFirstActive){
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             currScore_1 += number;
-            currentScore1.textContent=currScore_1
+            
         }
         else{
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             currScore_2 += number;
             currentScore2.textContent=currScore_2
         }
@@ -85,10 +99,14 @@ function rollDice() {
         image6.classList.add('hidden6');
        
         if(isFirstActive){
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             currScore_1 += number;
             currentScore1.textContent=currScore_1
         }
         else{
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             currScore_2 += number;
             currentScore2.textContent=currScore_2
         }
@@ -101,10 +119,14 @@ function rollDice() {
         image5.classList.add('hidden5');
         image6.classList.add('hidden6');
         if(isFirstActive){
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             currScore_1 += number;
             currentScore1.textContent=currScore_1
         }
         else{
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             currScore_2 += number;
             currentScore2.textContent=currScore_2
         }
@@ -117,10 +139,14 @@ function rollDice() {
         image5.classList.remove('hidden5');
         image6.classList.add('hidden6');
         if(isFirstActive){
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             currScore_1 += number;
             currentScore1.textContent=currScore_1
         }
         else{
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             currScore_2 += number;
             currentScore2.textContent=currScore_2
         }
@@ -133,10 +159,14 @@ function rollDice() {
         image5.classList.add('hidden5');
         image6.classList.remove('hidden6');
         if(isFirstActive){
+            left.classList.remove('trans-section')
+            right.classList.add('trans-section')
             currScore_1 += number;
             currentScore1.textContent=currScore_1
         }
         else{
+            right.classList.remove('trans-section')
+            left.classList.add('trans-section')
             currScore_2 += number;
             currentScore2.textContent=currScore_2
         }
@@ -146,6 +176,8 @@ function rollDice() {
 function holdDice(){
     if(isFirstActive){
         isFirstActive=false;
+        left.classList.remove('trans-section')
+        right.classList.add('trans-section')
         totalScore_1+=currScore_1;
         // totalScore_1=currScore_1;
         totalScore1.textContent=totalScore_1
@@ -153,7 +185,10 @@ function holdDice(){
         currentScore1.textContent=currScore_1
     }
     else{
+        
         isFirstActive=true;
+        right.classList.remove('trans-section')
+        left.classList.add('trans-section')
         totalScore_2+=currScore_2;
         // totalScore_2=currScore_2;
         totalScore2.textContent=totalScore_2

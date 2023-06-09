@@ -45,3 +45,6 @@ background:  linear-gradient(to bottom left, rgb(241, 156, 184), white 80%);
 .hidden6{
     display: none;
 }
+.trans-section{
+    background:transparent;
+}
